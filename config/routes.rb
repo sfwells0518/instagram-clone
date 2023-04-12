@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get "users/:id/edit" => "users#edit", as: "edit_user"
   post "/users" => "users#create"
   patch "users/:id" => "users#update"
+  # Session routes: Session management
+  get "/login" => "sessions#new", as: "login"
+  post "/sessions" => "sessions#create"
+  delete "/logout" => "sessions#destroy", as: "logout"
 end
