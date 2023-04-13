@@ -49,5 +49,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_191557) do
     t.string "password"
     t.string "confirm_password"
   end
-
 end
