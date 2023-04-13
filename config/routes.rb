@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
   # IG home
-
-  # get "/home" => "home#index"
+  root "home#index"
 
   # User routes: User auth and registration
 
   get "/signup" => "users#new", as: "signup"
+  post "/users" => "users#create"
   # get "/users/:id" => "users#show", as: "user"
   # get "/users/:id/edit" => "users#edit", as: "edit_user"
-  # post "/users" => "users#create"
   # patch "/users/:id" => "users#update"
 
   # # Session routes: Session management
