@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # IG home
   root "home#index"
 
-  # User routes: User auth and registration
+  # User Routes: User auth and registration
 
   get "/signup" => "users#new", as: "signup"
   post "/users" => "users#create"
@@ -10,13 +10,13 @@ Rails.application.routes.draw do
   # get "/users/:id/edit" => "users#edit", as: "edit_user"
   # patch "/users/:id" => "users#update"
 
-  # # Session routes: Session management
+  # # Session Routes: Session management
 
   # get "/login" => "sessions#new", as: "login"
   # post "/sessions" => "sessions#create"
   # delete "/logout" => "sessions#destroy", as: "logout"
 
-  # # Post routes: Post management
+  # # Post Routes: Post management
 
   # get "/posts" => "posts#index", as: "posts"
   # get "/posts/new" => "posts#new", as: "new_post"
