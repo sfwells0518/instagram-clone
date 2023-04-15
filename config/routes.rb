@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get "/signup" => "users#new", as: "signup"
   post "/users" => "users#create"
-  # get "/users/:id" => "users#show", as: "user"
+  get "/users/:id" => "users#show", as: "user"
   # get "/users/:id/edit" => "users#edit", as: "edit_user"
   # patch "/users/:id" => "users#update"
 

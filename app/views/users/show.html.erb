@@ -1,0 +1,19 @@
+<div class="profile-header">
+  <img src="<%= @user.profile_picture_url %>">
+  <h1><%= @user.username %></h1>
+  <p><%= @user.bio %></p>
+  <p><strong>Followers:</strong> <%= @user.followers.count %></p>
+  <p><strong>Following:</strong> <%= @user.following.count %></p>
+  <%= link_to "Upload New Post", new_post_path %>
+</div>
+
+<div class="post-container">
+  <% @user.posts.each do |post| %>
+    <div class="post">
+      <img src="<%= post.image_url %>">
+      <p><%= post.caption %></p>
+      <p><%= post.likes.count %> likes</p>
+      <p><%= post.comments.count %> comments</p>
+    </div>
+  <% end %>
+</div>

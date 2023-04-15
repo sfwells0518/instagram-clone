@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   # Define user_params method first
-
   def user_params
     params.require(:user).permit(
       :first_name,
@@ -27,5 +26,10 @@ class UsersController < ApplicationController
     else
       render json: { message: "failed to save, try submitting again!" }
     end
+  end
+
+  def show
+    @user = User.find_by(id: params[:id])
+    render :show
   end
 end
