@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :posts
+  has_many :comments
+  has_many :likes
 
   # Specify the allowed attributes and their types using the `attribute` method:
   attribute :first_name, :string
