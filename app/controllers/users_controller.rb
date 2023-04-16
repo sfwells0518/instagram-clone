@@ -8,7 +8,9 @@ class UsersController < ApplicationController
       :date_of_birth,
       :username,
       :password,
-      :confirm_password
+      :confirm_password,
+      :profile_image_url,
+      :bio
     )
   end
 
