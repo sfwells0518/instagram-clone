@@ -14,6 +14,6 @@ class User < ApplicationRecord
   attribute :profile_image_url, :string
   attribute :bio, :text
 
-  # Other code for your User model goes here, such as validations, associations, etc.
+  # Validation specific code:
 
 end
