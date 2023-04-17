@@ -1,9 +1,11 @@
 class User < ApplicationRecord
+  # Associations:
+  has_many :profiles
   has_many :posts
   has_many :comments
   has_many :likes
 
-  # Specify the allowed attributes and their types using the `attribute` method:
+  # Attributes:
   attribute :first_name, :string
   attribute :last_name, :string
   attribute :email_address, :string
@@ -14,6 +16,6 @@ class User < ApplicationRecord
   attribute :profile_image_url, :string
   attribute :bio, :text
 
-  # Validation specific code:
+  # Validations:
 
 end
