@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   # User Routes: User auth and registration
 
-  get "/signup" => "users#new", as: "signup"
   post "/users" => "users#create"
   get "/users/:id" => "users#show", as: "user"
   # get "/users/:id/edit" => "users#edit", as: "edit_user"
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
   # # Session Routes: Session management
 
   # get "/login" => "sessions#new", as: "login"
-  # post "/sessions" => "sessions#create"
+  post "/sessions" => "sessions#create"
   # delete "/logout" => "sessions#destroy", as: "logout"
 
   # # Post Routes: Post management

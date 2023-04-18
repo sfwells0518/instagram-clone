@@ -1,37 +1,16 @@
 class UsersController < ApplicationController
-  # Define user_params method first
-  def user_params
-    params.require(:user).permit(
-      :first_name,
-      :last_name,
-      :email_address,
-      :date_of_birth,
-      :username,
-      :password,
-      :confirm_password,
-      :profile_image_url,
-      :bio
-    )
-  end
-
-  # Define new and create actions after user_params
-  def new
-    @user = User.new
-  end
-
   def create
-    @user = User.new(user_params)
-
-    if @user.save
-      render json: { message: "user created successfully!" }
-      # redirect_to root_path
+    user = User.new(
+      name: params[:name],
+      email: params[:email],
+      username: params[:username],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation],
+    )
+    if user.save
+      render json: { message: "User created successfully" }, status: :created
     else
-      render json: { message: "failed to save, try submitting again!" }
+      render json: { errors: user.errors.full_messages }, status: :bad_request
     end
-  end
-
-  def show
-    @user = User.find_by(id: params[:id])
-    render :show
   end
 end
