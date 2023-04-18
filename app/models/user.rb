@@ -13,8 +13,6 @@ class User < ApplicationRecord
   attribute :username, :string
   attribute :password, :string
   attribute :confirm_password, :string
-  attribute :profile_image_url, :string
-  attribute :bio, :text
 
   # Validations:
 

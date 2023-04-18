@@ -3,7 +3,7 @@ class Profile < ApplicationRecord
   belongs_to :user
 
   # Attributes:
+  attribute :user_id, :integer
   attribute :profile_image_url, :string
   attribute :bio, :text
-  attribute :user_id, :integer
 end
