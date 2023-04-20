@@ -64,15 +64,18 @@ group :development do
   # gem "spring"
 end
 
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'jwt'
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
 
-# Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
 
-gem 'jwt'
+
 
 end
