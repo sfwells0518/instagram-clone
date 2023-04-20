@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  session_start_time: 2023-04-20 17:32:07
+  session_end_time: 2023-04-20 17:32:07
+  session_duration: 1
+  device_type: MyString
+  profiles_viewed: 1
+  posts_viewed: 1
+  posts_created: 1
+  posts_shared: 1
+  likes_given: 1
+
+two:
+  user_id: 1
+  session_start_time: 2023-04-20 17:32:07
+  session_end_time: 2023-04-20 17:32:07
+  session_duration: 1
+  device_type: MyString
+  profiles_viewed: 1
+  posts_viewed: 1
+  posts_created: 1
+  posts_shared: 1
+  likes_given: 1
