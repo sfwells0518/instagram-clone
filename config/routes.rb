@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # get "/users/:id/edit" => "users#edit", as: "edit_user"
   # patch "/users/:id" => "users#update"
 
+  # Profile Routes: Update Profile
+
   # # Session Routes: Session management
 
   # get "/login" => "sessions#new", as: "login"
