@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   get "/users/:id" => "users#show", as: "user"
   # get "/users/:id/edit" => "users#edit", as: "edit_user"
-  # patch "/users/:id" => "users#update"
 
   # Profile Routes: Update Profile
+  patch "/users/:id/profile" => "profiles#update", as: "update_user_profile"
 
   # # Session Routes: Session management
 
